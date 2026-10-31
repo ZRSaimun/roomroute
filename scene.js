@@ -4,7 +4,7 @@ let renderer;
 try{renderer=new T.WebGLRenderer({alpha:true,antialias:true,powerPreference:'low-power'});}catch{console.info('WebGL unavailable; interactive SVG scene remains active.');}
 if(renderer){
  renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setClearColor(0,0);renderer.shadowMap.enabled=true;renderer.shadowMap.type=T.PCFSoftShadowMap;renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=1.35;art.append(renderer.domElement);art.classList.add('webgl');
- const scene=new T.Scene(),camera=new T.PerspectiveCamera(35,1,.1,180),world=new T.Group(),parts=[],tints=[];scene.add(world);let progress=0,paused=matchMedia('(prefers-reduced-motion: reduce)').matches,visible=true,last=0,raf=0;
+ const scene=new T.Scene(),camera=new T.PerspectiveCamera(35,1,.1,180),world=new T.Group(),parts=[],tints=[];scene.add(world);let progress=window.sceneState?.progress||0,paused=matchMedia('(prefers-reduced-motion: reduce)').matches,visible=true,last=0,raf=0;
  const mat=(c,rough=.5,metal=0)=>new T.MeshStandardMaterial({color:c,roughness:rough,metalness:metal});
  const stone=mat('#aaa9a1',.8),black=mat('#171b24',.38,.25),white=mat('#e7e8e3',.5),wood=mat('#b0794e',.65),green=mat('#45683f',.9),chrome=mat('#a9b1bc',.2,.9);
  function mesh(geo,m,x=0,y=0,z=0,parent=world){const o=new T.Mesh(geo,m);o.position.set(x,y,z);o.castShadow=true;o.receiveShadow=true;parent.add(o);return o;}
