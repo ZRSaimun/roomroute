@@ -1,0 +1,45 @@
+{
+  "title": "The Office \u2014 recorded demonstration",
+  "creator": "VikasBuilds / Vikas Bharat Yadav",
+  "source": "https://vikasbuilds.com/store#office-demo",
+  "width": 1920,
+  "height": 1080,
+  "frames": 0,
+  "mode": "video",
+  "video": "https://media.vikasbuilds.com/the-office.mp4?v=2",
+  "chapters": [
+    {
+      "progress": 0,
+      "label": "The gate"
+    },
+    {
+      "progress": 0.14,
+      "label": "The studio"
+    },
+    {
+      "progress": 0.29,
+      "label": "Reception"
+    },
+    {
+      "progress": 0.43,
+      "label": "Boss cabin"
+    },
+    {
+      "progress": 0.62,
+      "label": "The street"
+    },
+    {
+      "progress": 0.72,
+      "label": "The field"
+    },
+    {
+      "progress": 0.84,
+      "label": "The car"
+    },
+    {
+      "progress": 0.95,
+      "label": "The city"
+    }
+  ],
+  "limitation": "The creator\u2019s public demo video is streamed from its original host. This is a scroll-controlled visual reference, not the paid interactive source code. Its original host must remain available."
+}
